@@ -88,7 +88,7 @@ export const CategoryForm: FC = () => {
         const body = new FormData();
         // важно использовать название file append('file', ...) иначе работать не будет
         body.append('file', file);
-        fetch('http://19429ba06ff2.vps.myjino.ru/api/upload', {
+        fetch('https://19429ba06ff2.vps.myjino.ru/api/upload', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

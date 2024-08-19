@@ -11,5 +11,5 @@
 - react router
 - sass
 
-Проект включает в себя деплой на github pages и будет доступен по адресу
+Проект включает в себя деплой на github pages и будет доступен по адресу https://yitala9b2.github.io/final-project/
 
