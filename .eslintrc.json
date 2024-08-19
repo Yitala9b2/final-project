@@ -1,0 +1,63 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/jsx-runtime", // позволяет не импортировать реакт
+        "plugin:react-hooks/recommended", //поддержка хуков
+        "plugin:import/recommended", // подсказки при импорте
+        // "airbnb",
+        "prettier", // отключает конфликты с prettier
+        "plugin:prettier/recommended",
+        "plugin:jest/recommended",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "indent":["error", 4],
+        "no-unused-vars":"off",
+        "no-plusplus":"off",
+        "eol-last":"off",
+        "max-len":"off",
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/triple-slash-reference": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error",
+        "prettier/prettier": ["error",{
+            "endOfLine": "false",
+            "tabWidth": 4,
+            "semi": false
+            }
+          ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "paths": ["."],
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    }
+}

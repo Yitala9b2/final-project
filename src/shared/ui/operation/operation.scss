@@ -1,0 +1,44 @@
+.operation{
+    
+    &.short{
+        min-height: 100px;
+        
+    }
+    width: 100%;
+    border-radius: 10px;
+    &__body{
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.3rem;
+
+        border-bottom: 0.5px solid rgba(128, 128, 128, 0.459);
+    }
+    &__info{
+        padding: 10px;
+        gap: 5px;
+        span{
+            font-size: 1rem;
+            color: grey;
+        }
+    }
+    &__right{
+        cursor: pointer;
+        width: 100%;
+        align-items: center;
+        border-left: 0.5px solid rgba(128, 128, 128, 0.459);
+    }
+    &__actions{
+        gap: 10px;
+        height: 100%;
+        padding: 10px;
+    }
+    &__amount{
+        justify-self: flex-end;
+        padding: 10px;
+        font-weight: 700;
+    }
+    &__description{
+        font-size: 1rem;
+        padding-top: 10px;
+    }
+}
