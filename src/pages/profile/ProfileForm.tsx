@@ -12,7 +12,7 @@ import useHttp from 'src/hooks/http.hook';
 import './profile.scss'
 
 type MyOmit<T, K extends keyof T> = Omit<T, K>;
-type updateProfileTypes = MyOmit<UserTypes, 'id' | 'commandId' | 'signUpDate'| 'email'>
+type updateProfileTypes = MyOmit<UserTypes, 'id' | 'commandId' | 'signUpDate'| 'email'| 'password'>
 
 const ProfileForm: FC<updateProfileTypes> = ({ name }) => {
     const dispatch = useDispatch()

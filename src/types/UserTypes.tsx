@@ -4,5 +4,6 @@ export interface UserTypes {
     name: string,
     signUpDate: Date;
     commandId: string;
+    password:string;
 }
 

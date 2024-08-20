@@ -29,7 +29,7 @@ export const fetchUser = createAsyncThunk(
             }
             const data = await response.json();
             dispatch(setToken(data.token));
-            dispatch(setUser(body))
+            dispatch(setUser({...data.profile}))
             return fulfillWithValue(data)
 
         } catch (error) {
