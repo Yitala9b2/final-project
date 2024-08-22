@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { setSnackBar } from "./snackBarSlice";
 import { UserTypes } from "src/types/UserTypes";
-
 interface IInput {
     email: string,
     password: string | null,
@@ -30,6 +29,11 @@ export const fetchUser = createAsyncThunk(
             const data = await response.json();
             dispatch(setToken(data.token));
             dispatch(setUser({...data.profile}))
+            dispatch(setSnackBar({
+                open: true,
+                text: "Пользователь зарегистрирован",
+                severity: 'success'
+            }));
             return fulfillWithValue(data)
 
         } catch (error) {
@@ -44,7 +48,6 @@ export const setInitialState = createAsyncThunk(
     'main/setInitialState',
     async (_, { dispatch, rejectWithValue, fulfillWithValue }) => {
         const token = localStorage.getItem("myToken")
-        
         try {
             if (!token) {
                 dispatch(setSnackBar({

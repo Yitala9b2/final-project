@@ -54,21 +54,6 @@ export const SignInForm: FC = () => {
     const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     };
-    //const clickHandler = () => {
-    //    fetch('http://19429ba06ff2.vps.myjino.ru/api/signup', {
-    //        method: 'POST',
-    //        headers: {
-    //            'Content-Type': 'application/json;charset=utf-8'
-    //        },
-    //        body: JSON.stringify({
-    //            email: "user@email.ty",
-    //            password: "123456",
-    //            commandId: "Vitala",
-    //        })
-    //    }).then((res) => {
-    //        console.log(res)
-    //    })
-    //}
     return (
         <FormProvider {...methods}>
             <Box className='form signInForm themeBg' component="form" onSubmit={handleSubmit(onSubmit)}>

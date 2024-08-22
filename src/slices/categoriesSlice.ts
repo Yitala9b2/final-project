@@ -9,11 +9,12 @@ type MyOmit<T, K extends keyof T> = Omit<T, K>;
 
 type CategoryToPost = MyOmit<CategoryType,'id'>
 
-const token = localStorage.getItem('myToken')
+
 
 export const postCategories = createAsyncThunk(
     'categories/postCategories',
     async (body: CategoryToPost, { dispatch, rejectWithValue, fulfillWithValue }) => {
+        const token = localStorage.getItem('myToken')
         try {
             const response = await fetch(`https://19429ba06ff2.vps.myjino.ru/api/categories`, {
                 method: 'POST',

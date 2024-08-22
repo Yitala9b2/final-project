@@ -17,7 +17,7 @@ export const ThemeContext = createContext<IThemeContext>({ theme: '', setTheme: 
 
 export const MyThemeProvider: FC<IThemeProviderProps> = ({ children }) => {
     const localTheme = localStorage.getItem("theme")
-    const [theme, setTheme] = useState(localTheme||"light")
+    const [theme, setTheme] = useState(localTheme || "light")
 
     useEffect(()=> {
         localStorage.setItem("theme", theme)
